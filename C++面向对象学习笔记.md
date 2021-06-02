@@ -128,6 +128,7 @@ public:
 	Book(); //不给出实参的构造函数是默认构造函数
 	Book(int i, float p, const char* bn) :id(i), price(p)
 	{
+         bn = new char[strlen(bn) + 1];
 		strcpy(book_name, bn);
 	}//没有给出string的重载函数
 	Book(int i, float p) :id(i), price(p) {}//没有给出string和char的构造函数
